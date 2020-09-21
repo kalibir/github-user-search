@@ -4,15 +4,18 @@ import {FaUserAlt, FaUsers} from "react-icons/fa";
 import { GoRepo } from "react-icons/go";
 
 const Card = styled.div`
-    width: 300px;
+    width: 25%;
     border: 0.5px solid #dee2e6;
     margin-top: 32px;
+    box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.11);
 `
 
 const Avatar = styled.div`
     width: 100%;
-    height: 225px;
-    background: salmon;
+    height: 325px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 `
 
 const InfoBar = styled.div`
@@ -26,14 +29,15 @@ const InfoBar = styled.div`
 const BarText = styled.p`
     margin-left: 16px;
 `
-const UserCard = () =>{
+const UserCard = (props) =>{
+    console.log(props.useravatar)
     return (
         <Card>
-            <Avatar />
-            <InfoBar><FaUserAlt size ={16} color={'#adb5bd'}/><BarText>User name</BarText></InfoBar>
-            <InfoBar> <FaUsers size ={16} color={'#adb5bd'}/><BarText>12 Followers</BarText></InfoBar>
-            <InfoBar><GoRepo size ={16} color={'#adb5bd'}/><BarText>2 Repos</BarText></InfoBar>
-            <InfoBar><FaUsers size ={16} color={'#adb5bd'}/><BarText>0 following</BarText></InfoBar>
+            <Avatar style={{backgroundImage: 'url(' + props.useravatar + ')'}}/>
+            <InfoBar><FaUserAlt size ={16} color={'#adb5bd'}/><BarText>{props.userlogin}</BarText></InfoBar>
+            <InfoBar> <FaUsers size ={16} color={'#adb5bd'}/><BarText>{props.userfollowers} Followers</BarText></InfoBar>
+            <InfoBar><GoRepo size ={16} color={'#adb5bd'}/><BarText>{props.userrepos} Repos</BarText></InfoBar>
+            <InfoBar><FaUsers size ={16} color={'#adb5bd'}/><BarText>{props.userfollwing} following</BarText></InfoBar>
         </Card>
     )
 }
