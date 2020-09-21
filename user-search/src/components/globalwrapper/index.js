@@ -67,7 +67,8 @@ const GlobalWrapper = (props) =>{
         setUserInput(e.target.value);
     }
 
-    const handleSubmit = () => {
+    const handleSubmit = (e) => {
+        e.preventDefault();
         fetch(`https://api.github.com/users/${userInput}`)
         .then(res => res.json())
         .then(data => {
