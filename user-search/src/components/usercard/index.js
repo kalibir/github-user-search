@@ -30,7 +30,6 @@ const BarText = styled.p`
     margin-left: 16px;
 `
 const UserCard = (props) =>{
-    console.log(props.useravatar)
     return (
         <Card>
             <Avatar style={{backgroundImage: 'url(' + props.useravatar + ')'}}/>
