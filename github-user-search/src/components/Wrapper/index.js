@@ -28,7 +28,11 @@ const Wrapper = () => {
 		<div className='main'>
 			<SearchBar clickHandler={handleResults} searchHandler={handleSearch} />
 			<div className='repo-wrapper'>
-				<Repos />
+				{repos.length
+					? repos.map((repo, index) => {
+							return <Repos repoLink={repo.html_url} name={repo.name} />;
+					  })
+					: "Loading..."}
 			</div>
 		</div>
 	);

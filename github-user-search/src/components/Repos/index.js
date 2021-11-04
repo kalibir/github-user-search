@@ -1,9 +1,9 @@
 import React from "react";
 import "./styles.css";
-const Repos = () => {
+const Repos = ({ name, repoLink }) => {
 	return (
-		<a href='#' className='repo-link'>
-			Name
+		<a href={repoLink} className='repo-link'>
+			{name}
 		</a>
 	);
 };
