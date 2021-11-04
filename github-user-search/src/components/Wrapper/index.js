@@ -30,7 +30,9 @@ const Wrapper = () => {
 			<div className='repo-wrapper'>
 				{repos.length
 					? repos.map((repo, index) => {
-							return <Repos repoLink={repo.html_url} name={repo.name} />;
+							return (
+								<Repos key={index} repoLink={repo.html_url} name={repo.name} />
+							);
 					  })
 					: "Loading..."}
 			</div>
