@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./styles.css";
 import SearchBar from "../SearchBar";
+import Repos from "../Repos";
 import axios from "axios";
 
 const Wrapper = () => {
@@ -26,7 +27,9 @@ const Wrapper = () => {
 	return (
 		<div className='main'>
 			<SearchBar clickHandler={handleResults} searchHandler={handleSearch} />
-			<div className='repo-wrapper'></div>
+			<div className='repo-wrapper'>
+				<Repos />
+			</div>
 		</div>
 	);
 };
