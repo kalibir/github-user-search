@@ -1,0 +1,13 @@
+.repo-link {
+	background-color: #fff;
+	border-radius: 5px;
+	padding: 0.5em;
+	margin: 1em;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.repo-link:hover {
+	background-color: #58a6ff;
+	color: #fff;
+}
