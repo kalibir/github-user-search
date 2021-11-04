@@ -17,7 +17,6 @@ const Wrapper = () => {
 			.get(`https://api.github.com/users/${user}/repos`)
 			.then((res) => {
 				setRepos(res.data);
-				console.log(repos);
 			})
 			.catch((error) => {
 				console.log(error);
