@@ -34,7 +34,7 @@ const Wrapper = () => {
 								<Repos key={index} repoLink={repo.html_url} name={repo.name} />
 							);
 					  })
-					: "Loading..."}
+					: "Please search for a username to check the repositories. "}
 			</div>
 		</div>
 	);
